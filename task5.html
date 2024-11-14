@@ -8,12 +8,11 @@
 		<script>
 			"use strict";
 			function printText(txt, size = 14, color = "black", align = "center") {
-				document.write(`<div style="font-size:${size}pt; color:${color}; text-align:${align}">${txt}</div>`);
+				document.write(`<div style="display:inline-block; font-size:${size}pt; color:${color}; text-align:${align}; margin-right:10px">${txt}</div>`);
 			}
-			printText("<p>Великий шрифт", 32, "blue", "left"); 
-			printText("<p>Шрифт за замовченням - перший рядок", "center"); // default to center
-			printText("<p>Малий шрифт", 8, "red", "right");
+			printText("Великий шрифт", 32, "blue", "left"); 
+			printText("Шрифт за замовченням - перший рядок", "center"); // default to center
+			printText("Малий шрифт", 8, "red", "right");
 		</script>
 	</body>
 </html>
-
