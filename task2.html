@@ -1,1 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Звір, ПП-24</title>
+
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			let today = new Date();
+			let month = 5; // Замініть на місяць вашого дня народження (0 = січень, 11 = грудень)
+			let day = 15;  // Замініть на день вашого народження
+
+			let birthday = new Date(today.getFullYear(), month, day);
+
+			// Якщо день народження вже пройшов цього року, додаємо рік
+			if (today > birthday) {
+				birthday.setFullYear(today.getFullYear() + 1);
+			}
+
+			const dayMs = 86400000;
+			const hourMs = 3600000; 
+			const minuteMs = 60000;
+
+			let timeLeft = birthday.getTime() - today.getTime(); 
+			let days = Math.floor(timeLeft / dayMs);
+			let hours = Math.floor((timeLeft - days * dayMs) / hourMs);
+			let minutes = Math.floor((timeLeft - days * dayMs - hours * hourMs) / minuteMs);
+
+			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+			console.log("До дня народження лишилося ", str);
+			alert("До дня народження лишилося " + str);
+		</script>
+
+	</body>
+</html>
 
