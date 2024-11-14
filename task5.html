@@ -1,1 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Прізвище, група</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			function printText(txt, size = 14, color = "black") {
+				document.write(`<div style="font-size:${size}pt; color:${color}">${txt}</div>`);
+			}
+			printText("<p>Великий шрифт", 32, "blue"); 
+			printText("<p>Шрифт за замовченням - перший рядок"); 
+			printText("<p>Малий шрифт", 8, "red");
+		</script>
+	</body>
+</html>
 
