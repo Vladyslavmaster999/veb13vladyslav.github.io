@@ -11,7 +11,7 @@
         "use strict";
 
         function weekDay(day, size, color) {
-            const days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+            const days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
             let today = new Date();
             let dayOfWeek = today.getDay();
             
@@ -24,13 +24,13 @@
         }
 
         // Відображення днів тижня з різними кольорами та розмірами
-        weekDay(0, 20, "red");    // Неділя
-        weekDay(1, 24, "orange"); // Понеділок
-        weekDay(2, 28, "yellow"); // Вівторок
-        weekDay(3, 32, "green");  // Середа
-        weekDay(4, 36, "blue");   // Четвер
-        weekDay(5, 40, "purple"); // П'ятниця
-        weekDay(6, 44, "pink");   // Субота
+        weekDay(0, 45, "black");    // Неділя
+        weekDay(1, 40, "black"); // Понеділок
+        weekDay(2, 35, "yellow"); // Вівторок
+        weekDay(3, 30, "green");  // Середа
+        weekDay(4, 25, "red");   // Четвер
+        weekDay(5, 20, "blue"); // П'ятниця
+        weekDay(6, 15, "violet");   // Субота
     </script>
 
 </body>
