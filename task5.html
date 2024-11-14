@@ -7,12 +7,12 @@
 	<body>
 		<script>
 			"use strict";
-			function printText(txt, size = 14, color = "black") {
-				document.write(`<div style="font-size:${size}pt; color:${color}">${txt}</div>`);
+			function printText(txt, size = 14, color = "black", align = "center") {
+				document.write(`<div style="font-size:${size}pt; color:${color}; text-align:${align}">${txt}</div>`);
 			}
-			printText("<p>Великий шрифт", 32, "blue"); 
-			printText("<p>Шрифт за замовченням - перший рядок"); 
-			printText("<p>Малий шрифт", 8, "red");
+			printText("<p>Великий шрифт", 32, "blue", "left"); 
+			printText("<p>Шрифт за замовченням - перший рядок", "center"); // default to center
+			printText("<p>Малий шрифт", 8, "red", "right");
 		</script>
 	</body>
 </html>
