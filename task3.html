@@ -3,18 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Звір, ПП-24</title>
+		<style>
+			/* Additional styling for container divs to handle positioning */
+			.left { float: left; width: 100%; text-align: left; }
+			.center { width: 100%; text-align: center; }
+			.right { float: right; width: 100%; text-align: right; }
+		</style>
 	</head>	
 	<body>
 		<script>
-			// Function to display a message with specified color and font size
-			function DisplayMessage(txt, color, size) { 
-				document.write("<span style='color:" + color + "; font-size:" + size + "px;'>" + txt + "</span><br />");
+			// Function to display a message with specified color, font size, and alignment
+			function DisplayMessage(txt, color, size, alignment) { 
+				document.write("<div class='" + alignment + "'><span style='color:" + color + "; font-size:" + size + "px;'>" + txt + "</span></div><br />");
 			}
 			
 			// Calling the function with specified parameters
-			DisplayMessage("Це повідомлення червоного кольору", "red", 20); 
-			DisplayMessage("Це повідомлення синього кольору", "blue", 30); 
-			DisplayMessage("Це повідомлення зеленого кольору", "green", 40);
+			DisplayMessage("Використання вбудованих функцій", "blue", 20, "left"); 
+			DisplayMessage("Створення користувацьких функцій.", "yellow", 30, "center"); 
+			DisplayMessage("Використання масиву arguments.", "red", 40, "right");
 		</script>
 	</body>
 </html>
