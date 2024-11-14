@@ -13,12 +13,6 @@
 			let day = 15;  // Замініть на день вашого народження
 
 			let birthday = new Date(today.getFullYear(), month, day);
-
-			// Якщо день народження вже пройшов цього року, додаємо рік
-			if (today > birthday) {
-				birthday.setFullYear(today.getFullYear() + 1);
-			}
-
 			const dayMs = 86400000;
 			const hourMs = 3600000; 
 			const minuteMs = 60000;
