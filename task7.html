@@ -7,14 +7,22 @@
 	<body>
 		<script>
 			let i = 5;
-			function f(a,b,c) { 
+			function f(a, b, c) { 
 				if (a > b) {
-                                    return c; }
-
-				if 
+					return c;
+				} else if (a > c) {
+					return b;
+				} else if (b > c) {
+					return a;
+				} else {
+					return a, b, c;
+				}
 			}
+
 			document.write("Значення змінної i: " + i.valueOf()); 
-			document.write("<p>Значенння змінної f:<BR>" + f.valueOf());
+			document.write("<p>Значення змінної f(3, 2, 1):<br>" + f(3, 2, 1) + "</p>");
+			document.write("<p>Значення змінної f(1, 2, 3):<br>" + f(1, 2, 3) + "</p>");
+                        document.write("<p>Значення змінної f(3, 2, 4):<br>" + f(3, 2, 4) + "</p>");
 		</script>
 	</body>
 </html>
