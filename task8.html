@@ -1,1 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Прізвище, група</title>
+    </head>    
+    <body>
+        <h3>Введіть числа через кому:</h3>
+        <input type="text" id="numbers" placeholder="Наприклад: 2,9,7">
+        <button onclick="calculateMean()">Обчислити середнє</button>
+        <p id="result"></p>
+
+        <script>
+            function mean() {
+                if (arguments.length === 0) {
+                    alert("Не введено жодного аргументу");
+                    return 0;
+                }
+
+                var result = 0;
+                for (var i = 0; i < arguments.length; i++) { 
+                    result += arguments[i];
+                }
+
+                return result / arguments.length;
+            }
+
+            function calculateMean() {
+                var input = document.getElementById("numbers").value;
+                var numbersArray = input.split(",").map(Number); // Розділити введений текст і перетворити на числа
+
+                if (numbersArray.some(isNaN)) {
+                    document.getElementById("result").innerText = "Введіть лише числа!";
+                    return;
+                }
+
+                var result = mean(...numbersArray); // Передати масив чисел як аргументи
+                document.getElementById("result").innerText = "Середнє значення: " + result;
+            }
+        </script>
+    </body>
+</html>
 
