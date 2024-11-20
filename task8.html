@@ -27,14 +27,14 @@
 
             function calculateMean() {
                 var input = document.getElementById("numbers").value;
-                var numbersArray = input.split(",").map(Number); // Розділити введений текст і перетворити на числа
+                var numbersArray = input.split(",").map(Number);
 
                 if (numbersArray.some(isNaN)) {
                     document.getElementById("result").innerText = "Введіть лише числа!";
                     return;
                 }
 
-                var result = mean(...numbersArray); // Передати масив чисел як аргументи
+                var result = mean(...numbersArray); 
                 document.getElementById("result").innerText = "Середнє значення: " + result;
             }
         </script>
