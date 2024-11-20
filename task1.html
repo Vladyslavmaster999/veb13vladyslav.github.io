@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Звір, ПП-24</title>
+    <title>task1</title>
 
 </head>
 <body>
@@ -10,27 +10,25 @@
     <script>
         "use strict";
 
-        function weekDay(day, size, color) {
+        function week(day, size, color) {
             const days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
             let today = new Date();
             let dayOfWeek = today.getDay();
-            
-            // Створення елемента для відображення дня тижня
+
             let dayElement = document.createElement("div");
             dayElement.style.fontSize = size + "px";
             dayElement.style.color = color;
-            dayElement.textContent = days[day % 7]; // Забезпечення циклічності
+            dayElement.textContent = days[day % 7]; 
             document.body.appendChild(dayElement);
         }
 
-        // Відображення днів тижня з різними кольорами та розмірами
-        weekDay(0, 45, "black");    // Неділя
-        weekDay(1, 40, "black"); // Понеділок
-        weekDay(2, 35, "yellow"); // Вівторок
-        weekDay(3, 30, "green");  // Середа
-        weekDay(4, 25, "red");   // Четвер
-        weekDay(5, 20, "blue"); // П'ятниця
-        weekDay(6, 15, "violet");   // Субота
+        week(0, 45, "black");    
+        week(1, 40, "black");
+        week(2, 35, "yellow"); 
+        week(3, 40, "green")
+        week(4, 25, "red");   
+        week(5, 20, "blue"); 
+        week(6, 15, "violet");   
     </script>
 
 </body>
